@@ -31,7 +31,7 @@ const router=createBrowserRouter([
       },
       {
         path:'/cheekout/:id',
-        element:<CheeckOut></CheeckOut>,
+        element:<PrivateRoute><CheeckOut></CheeckOut></PrivateRoute>,
         loader:({params})=>fetch(`http://localhost:5000/service/${params.id}`)
       },
       {
